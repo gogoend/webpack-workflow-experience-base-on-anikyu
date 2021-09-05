@@ -51,6 +51,7 @@
     "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
+    "anikyu": "^1.0.1",
     "lodash": "^4.17.21"
   }
 }

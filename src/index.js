@@ -4,6 +4,10 @@ import './js/button-event';
 
 import { cube } from './js/math';
 
+import helloGogoend from './unidentified-file/hello.gogoend';
+
+console.warn(helloGogoend);
+
 import('lodash').then((_) => {
 	console.log(_);
 });

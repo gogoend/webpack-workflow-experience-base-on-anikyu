@@ -4,9 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = {
-	entry: [
-		'./src/index.js'
-	],
+	entry: {
+		index: './src/index.js',
+		another: './src/another.js'
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].bundle.js',
@@ -19,15 +20,22 @@ module.exports = {
 	module: {
 		rules: [
 			{
-                enforce: "pre",
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: "eslint-loader"
-            },
-			{
-				test: /\.js$/,
+				enforce: "pre",
+				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader',
+				use: "eslint-loader"
+			},
+			{
+				test: /\.(js|jsx)$/,
+				exclude: /node_modules/,
+				use: [
+					'babel-loader'
+				]
+			},
+			{
+				test: /\.gogoend$/,
+				exclude: /node_modules/,
+				loader: path.resolve('./build/gogoend-loader/index.js'),
 			},
 		],
 	},

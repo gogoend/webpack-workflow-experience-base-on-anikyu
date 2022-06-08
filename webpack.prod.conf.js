@@ -26,10 +26,17 @@ module.exports = [{
 				use: "eslint-loader"
 			},
 			{
-				test: /\.js$/,
+				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader',
+				use: [
+					'babel-loader'
+				]
 			},
+			{
+				test: /\.gogoend$/,
+				exclude: /node_modules/,
+				loader: path.resolve('./build/gogoend-loader/index.js'),
+			}
 		],
 	},
 	plugins: [

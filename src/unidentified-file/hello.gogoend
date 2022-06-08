@@ -1,0 +1,3 @@
+let helloGogoend = 'hello gogoend';
+
+export default helloGogoend;

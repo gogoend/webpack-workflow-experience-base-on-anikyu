@@ -6,7 +6,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 module.exports = [{
 	entry: {
 		index: './src/index.js',
-		another: './src/another.js'
+		another: './src/another.ts'
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -21,15 +21,16 @@ module.exports = [{
 		rules: [
 			{
 				enforce: "pre",
-				test: /\.(js|jsx)$/,
+				test: /\.(js|jsx|ts|tsx)$/,
 				exclude: /node_modules/,
 				use: "eslint-loader"
 			},
 			{
-				test: /\.(js|jsx)$/,
+				test: /\.(js|jsx|ts|tsx)$/,
 				exclude: /node_modules/,
 				use: [
-					'babel-loader'
+					'babel-loader',
+					'ts-loader'
 				]
 			},
 			{

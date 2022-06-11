@@ -217,7 +217,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([0,3,1,2]);
+/******/ 	deferredModules.push([0,1,2]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -257,8 +257,7 @@ console.warn(_unidentified_file_hello_gogoend__WEBPACK_IMPORTED_MODULE_8__["defa
 __webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, 115)).then(function (component) {
   console.log(component);
 });
-Promise.resolve(/* import() */).then(__webpack_require__.t.bind(null, 111, 7)).then(function (_ref) {
-  var cloneDeep = _ref.cloneDeep;
+__webpack_require__.e(/* import() */ 6).then(__webpack_require__.t.bind(null, 119, 7)).then(function (cloneDeep) {
   console.log(cloneDeep);
 });
 console.log(Object(_js_math__WEBPACK_IMPORTED_MODULE_7__["cube"])(1000));

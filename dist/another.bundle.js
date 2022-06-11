@@ -246,8 +246,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-__webpack_require__.e(/* import() */ 3).then(__webpack_require__.t.bind(null, 111, 7)).then(function (_ref) {
-  var cloneDeep = _ref.cloneDeep;
+Promise.all(/* import() */[__webpack_require__.e(6), __webpack_require__.e(3)]).then(__webpack_require__.t.bind(null, 119, 7)).then(function (cloneDeep) {
   console.log(cloneDeep);
   console.log(11211);
 });

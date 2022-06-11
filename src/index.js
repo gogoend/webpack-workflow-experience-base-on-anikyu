@@ -12,7 +12,7 @@ import('./vue/Demo.vue').then((component) => {
 	console.log(component);
 });
 
-import('lodash').then((_) => {
-	console.log(_);
+import('lodash').then(({ cloneDeep }) => {
+	console.log(cloneDeep);
 });
 console.log(cube(1000));

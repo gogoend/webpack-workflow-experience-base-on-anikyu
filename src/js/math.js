@@ -1,6 +1,6 @@
-import _ from 'lodash';
+import { cloneDeep } from 'lodash';
 
-console.log(_);
+console.log(cloneDeep);
 
 export function square (x) {
 	return x * x;

@@ -257,8 +257,9 @@ console.warn(_unidentified_file_hello_gogoend__WEBPACK_IMPORTED_MODULE_8__["defa
 __webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, 115)).then(function (component) {
   console.log(component);
 });
-Promise.resolve(/* import() */).then(__webpack_require__.t.bind(null, 111, 7)).then(function (_) {
-  console.log(_);
+Promise.resolve(/* import() */).then(__webpack_require__.t.bind(null, 111, 7)).then(function (_ref) {
+  var cloneDeep = _ref.cloneDeep;
+  console.log(cloneDeep);
 });
 console.log(Object(_js_math__WEBPACK_IMPORTED_MODULE_7__["cube"])(1000));
 
@@ -332,7 +333,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(111);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 
-console.log(lodash__WEBPACK_IMPORTED_MODULE_0___default.a);
+console.log(lodash__WEBPACK_IMPORTED_MODULE_0__["cloneDeep"]);
 function square(x) {
   return x * x;
 }

@@ -246,8 +246,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-__webpack_require__.e(/* import() */ 3).then(__webpack_require__.t.bind(null, 111, 7)).then(function (_) {
-  console.log(_.cloneDeep);
+__webpack_require__.e(/* import() */ 3).then(__webpack_require__.t.bind(null, 111, 7)).then(function (_ref) {
+  var cloneDeep = _ref.cloneDeep;
+  console.log(cloneDeep);
   console.log(11211);
 });
 

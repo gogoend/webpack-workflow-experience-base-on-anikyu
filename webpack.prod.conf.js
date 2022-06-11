@@ -13,9 +13,9 @@ module.exports = [{
 		filename: '[name].bundle.js',
 		chunkFilename: '[name].chunk.js' // 指定非入口js文件的名称
 	},
-	mode: 'production',
+	mode: 'none',
 	optimization: {
-		minimize: true
+		minimize: false
 	},
 	module: {
 		rules: [
@@ -31,6 +31,13 @@ module.exports = [{
 				use: [
 					'babel-loader',
 					'ts-loader'
+				]
+			},
+			{
+				test: /\.(vue)$/,
+				exclude: /node_modules/,
+				use: [
+					'vue-loader'
 				]
 			},
 			{

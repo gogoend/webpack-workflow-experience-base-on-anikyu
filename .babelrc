@@ -16,6 +16,14 @@
             {
                 "useESModules": false
             }
+        ],
+        [
+            "babel-plugin-import",
+            {
+                "libraryName": "lodash",
+                "libraryDirectory": "",
+                "camel2DashComponentName": false  // default: true
+            }
         ]
     ]
 }

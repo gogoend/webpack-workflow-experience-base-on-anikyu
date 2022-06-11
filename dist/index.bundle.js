@@ -217,7 +217,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([0,1,2]);
+/******/ 	deferredModules.push([0,1,3,2]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -243,7 +243,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_button_event__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(109);
 /* harmony import */ var _js_button_event__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_button_event__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _js_math__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(110);
-/* harmony import */ var _unidentified_file_hello_gogoend__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(113);
+/* harmony import */ var _unidentified_file_hello_gogoend__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(220);
 
 
 
@@ -254,10 +254,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 console.warn(_unidentified_file_hello_gogoend__WEBPACK_IMPORTED_MODULE_8__["default"]);
-__webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, 115)).then(function (component) {
+__webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, 222)).then(function (component) {
   console.log(component);
 });
-__webpack_require__.e(/* import() */ 6).then(__webpack_require__.t.bind(null, 119, 7)).then(function (cloneDeep) {
+Promise.resolve(/* import() */).then(__webpack_require__.t.bind(null, 111, 7)).then(function (cloneDeep) {
   console.log(cloneDeep);
 });
 console.log(Object(_js_math__WEBPACK_IMPORTED_MODULE_7__["cube"])(1000));
@@ -329,10 +329,10 @@ button.addEventListener('click', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "square", function() { return square; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cube", function() { return cube; });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(111);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(111);
+/* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_0__);
 
-console.log(lodash__WEBPACK_IMPORTED_MODULE_0__["cloneDeep"]);
+console.log(lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_0___default.a);
 function square(x) {
   return x * x;
 }
@@ -342,7 +342,7 @@ function cube(x) {
 
 /***/ }),
 
-/***/ 113:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -217,14 +217,14 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([114,1]);
+/******/ 	deferredModules.push([221,1]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 114:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -246,7 +246,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-Promise.all(/* import() */[__webpack_require__.e(6), __webpack_require__.e(3)]).then(__webpack_require__.t.bind(null, 119, 7)).then(function (cloneDeep) {
+__webpack_require__.e(/* import() */ 3).then(__webpack_require__.t.bind(null, 111, 7)).then(function (cloneDeep) {
   console.log(cloneDeep);
   console.log(11211);
 });

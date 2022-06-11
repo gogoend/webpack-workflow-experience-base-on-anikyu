@@ -8,6 +8,10 @@ import helloGogoend from './unidentified-file/hello.gogoend';
 
 console.warn(helloGogoend);
 
+import('./vue/Demo.vue').then((component) => {
+	console.log(component);
+});
+
 import('lodash').then((_) => {
 	console.log(_);
 });

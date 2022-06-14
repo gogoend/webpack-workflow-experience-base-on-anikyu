@@ -15,7 +15,12 @@ module.exports = ({ types: t}) => {
           parentIsIf &&
           isDebug
         ) {
-          // TODO:
+          // 把标识符转换字符串字面量 - 即把示例中的DEBUG转换为‘DEBUG’
+          const stringNode = t.stringLiteral('DEBUG')
+
+          path.replaceWith(
+            stringNode
+          )
         }
       }
     }

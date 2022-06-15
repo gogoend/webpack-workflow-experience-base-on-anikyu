@@ -16,3 +16,10 @@ import('lodash/cloneDeep').then((cloneDeep) => {
 	console.log(cloneDeep);
 });
 console.log(cube(1000));
+
+import Demo from './vue/Demo.vue';
+
+console.log(Demo);
+(new Demo).$mount(
+	document.createElement('div')
+);

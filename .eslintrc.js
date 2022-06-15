@@ -34,10 +34,9 @@ module.exports = {
 		'space-infix-ops': 1,
 		'spaced-comment': 1
 	},
-	"parser": "@babel/eslint-parser",
-	"parserOptions": {
-		"sourceType": "module",
-		"allowImportExportEverywhere": false,
-		"codeFrame": true
-	  }
+	"parser": "@typescript-eslint/parser",
+	"plugins": [
+		// TODO: @typescript-eslint/eslint-plugin 可以被注释；那么它的作用是什么？
+		// "@typescript-eslint/eslint-plugin"
+	]
 };

@@ -7,20 +7,27 @@ module.exports = ({ types: t}) => {
         console.log('Identifier')
 
         const parentIsIf = t.isIfStatement(path.parentPath)
-        const isDebug = path.node.name === 'DEBUG'
-        console.log(parentIsIf, isDebug)
+        const isGogoend = path.node.name === 'GOGOEND'
+        console.log(parentIsIf, isGogoend)
 
-        // 检查当前节点是否满足父节点为if语句且node.name（判断条件）是否为DEBUG标识符
+        // 检查当前节点是否满足父节点为if语句且node.name（判断条件）是否为GOGOEND标识符
         if (
           parentIsIf &&
-          isDebug
+          isGogoend
         ) {
-          // 把标识符转换字符串字面量 - 即把示例中的DEBUG转换为‘DEBUG’
-          const stringNode = t.stringLiteral('DEBUG')
+          // 把标识符转换字符串字面量 - 即把示例中的GOGOEND转换为‘GOGOEND’
+          const stringNode = t.stringLiteral('GOGOEND')
 
           path.replaceWith(
             stringNode
           )
+        }
+      },
+      StringLiteral(path) {
+        const parentIsIf = t.isIfStatement(path.parentPath)
+        const isGogoend = path.node.value === 'GOGOEND'
+        if (isGogoend && parentIsIf) {
+          path.parentPath.remove()
         }
       }
     }

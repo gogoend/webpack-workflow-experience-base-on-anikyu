@@ -25,5 +25,6 @@
                 "camel2DashComponentName": false  // default: true
             }
         ],
+        "module:gogoend-babel-false-flag-condition-removal-plugin"
     ]
 }

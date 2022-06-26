@@ -3,32 +3,21 @@
   "private": true,
   "version": "0.0.0",
   "description": "Demo suite for exploring Webpack, Babel, Lerna, etc. DO NOT PUBLISH TO NPM!",
-  "main": "dist/anikyu.js",
-  "module": "dist/anikyu.esm.js",
   "scripts": {
-    "dev": "webpack serve --config webpack.dev.conf.js --open",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "lint": "eslint src --ext js --fix",
-    "build": "webpack --config webpack.prod.conf.js"
+    "lint": "eslint packages --ext js --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gogoend/anikyu.git"
+    "url": "git+https://github.com/gogoend/webpack-workflow-experience-base-on-anikyu.git"
   },
-  "keywords": [
-    "js",
-    "animation",
-    "tween",
-    "front-end",
-    "css",
-    "keyframe"
-  ],
+  "keywords": [],
   "author": "gogoend",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gogoend/anikyu/issues"
+    "url": "https://github.com/gogoend/webpack-workflow-experience-base-on-anikyu/issues"
   },
-  "homepage": "https://github.com/gogoend/anikyu#readme",
+  "homepage": "https://github.com/gogoend/webpack-workflow-experience-base-on-anikyu",
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",

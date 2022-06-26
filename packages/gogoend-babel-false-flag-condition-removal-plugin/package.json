@@ -1,0 +1,25 @@
+{
+  "name": "gogoend-babel-false-flag-condition-removal-plugin",
+  "version": "0.0.1",
+  "description": "",
+  "author": "gogoend <gogoend@qq.com>",
+  "homepage": "https://github.com/gogoend/webpack-workflow-experience-base-on-anikyu/tree/main/packages/gogoend-babel-false-flag-condition-removal-plugin#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gogoend/webpack-workflow-experience-base-on-anikyu.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/gogoend/webpack-workflow-experience-base-on-anikyu/issues"
+  }
+}

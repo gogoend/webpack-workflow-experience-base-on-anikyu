@@ -44,13 +44,7 @@ module.exports = {
 				test: /\.gogoend$/,
 				exclude: /node_modules/,
 				use: [
-					// path.resolve('./build/gogoend-loader/index.js'),
-					{
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-            },
-          },
+					path.resolve('./build/gogoend-loader/index.js')
 				]
 			}
 		],

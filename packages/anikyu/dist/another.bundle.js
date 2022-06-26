@@ -217,14 +217,14 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([221,1]);
+/******/ 	deferredModules.push([229,1]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 221:
+/***/ 229:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -250,6 +250,11 @@ __webpack_require__.e(/* import() */ 3).then(__webpack_require__.t.bind(null, 11
   console.log(cloneDeep);
   console.log(11211);
 });
+console.log('Ts', 'RUN!!!', 'GOGOEND!!!');
+/**
+ * if块最终将被我们所编写的Babel插件删除
+ */
+// @ts-ignore
 
 /***/ })
 

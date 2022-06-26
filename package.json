@@ -1,8 +1,8 @@
 {
-  "name": "anikyu",
+  "name": "gogoend-test",
   "private": true,
-  "version": "1.0.1",
-  "description": "A simple animation library for creating queued tween animation.",
+  "version": "0.0.0",
+  "description": "Demo suite for exploring Webpack, Babel, Lerna, etc. DO NOT PUBLISH TO NPM!",
   "main": "dist/anikyu.js",
   "module": "dist/anikyu.esm.js",
   "scripts": {

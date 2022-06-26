@@ -25,6 +25,5 @@
                 "camel2DashComponentName": false  // default: true
             }
         ],
-        "./build/gogoend-babel-removal-plugin/index.js"
     ]
 }

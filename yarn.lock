@@ -2434,6 +2434,11 @@ ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.4, ajv@^6.12.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+anikyu@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/anikyu/-/anikyu-1.0.1.tgz#dd90cad157d56a89232a714994bfcd7086cde547"
+  integrity sha512-zIYZTqLpg8Cn/oK+Dtb6OruLb8bPn3VCIrN6/1e2izhG+xmDG1gE3fw8U7zIAQvbJ4jRDO2DPDF+cYalf+Nltg==
+
 ansi-escapes@^4.2.1:
   version "4.3.2"
   resolved "https://registry.nlark.com/ansi-escapes/download/ansi-escapes-4.3.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fansi-escapes%2Fdownload%2Fansi-escapes-4.3.2.tgz"

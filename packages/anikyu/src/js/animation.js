@@ -1,4 +1,4 @@
-import Anikyu from 'anikyu/src/anikyu';
+import Anikyu from 'anikyu';
 
 var el = document.querySelector('.target');
 

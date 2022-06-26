@@ -1,5 +1,5 @@
-module.exports = function(source, map, meta) {
-  console.log(this, source, map, meta);
+module.exports = function (source, map, meta) {
+	console.log(this, source, map, meta);
 
-  return source;
+	return source;
 };

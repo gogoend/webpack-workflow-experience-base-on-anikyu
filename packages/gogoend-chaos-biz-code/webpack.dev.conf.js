@@ -1,7 +1,7 @@
 const path = require('path');
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
 	entry: {
@@ -14,16 +14,19 @@ module.exports = {
 		chunkFilename: '[name].chunk.js' // 指定非入口js文件的名称
 	},
 	mode: 'development',
-	optimization:{
-		minimize: false
+	optimization: {
+		minimize: false,
+		splitChunks: {
+			chunks: 'all'
+		}
 	},
 	module: {
 		rules: [
 			{
-				enforce: "pre",
+				enforce: 'pre',
 				test: /\.(js|jsx|ts|tsx)$/,
 				exclude: /node_modules/,
-				use: "eslint-loader"
+				use: 'eslint-loader'
 			},
 			{
 				test: /\.(js|jsx|ts|tsx)$/,
@@ -66,10 +69,5 @@ module.exports = {
 			inject: true
 		}),
 		new webpack.HotModuleReplacementPlugin()
-	],
-	optimization: {
-		splitChunks: {
-			chunks: 'all'
-		}
-	}
-}
+	]
+};

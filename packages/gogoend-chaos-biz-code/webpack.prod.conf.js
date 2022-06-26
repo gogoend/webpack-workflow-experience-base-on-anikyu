@@ -15,15 +15,18 @@ module.exports = [{
 	},
 	mode: 'none',
 	optimization: {
-		minimize: false
+		minimize: false,
+		splitChunks: {
+			chunks: 'all'
+		}
 	},
 	module: {
 		rules: [
 			{
-				enforce: "pre",
+				enforce: 'pre',
 				test: /\.(js|jsx|ts|tsx)$/,
 				exclude: /node_modules/,
-				use: "eslint-loader"
+				use: 'eslint-loader'
 			},
 			{
 				test: /\.(js|jsx|ts|tsx)$/,
@@ -58,11 +61,6 @@ module.exports = [{
 			inject: true
 		}),
 		new BundleAnalyzerPlugin()
-	],
-	optimization: {
-		splitChunks: {
-			chunks: 'all'
-		}
-	}
-}]
+	]
+}];
 

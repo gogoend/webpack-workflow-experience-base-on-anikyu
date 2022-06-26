@@ -1,0 +1,29 @@
+{
+  "name": "anikyu",
+  "version": "1.0.1",
+  "description": "> TODO: description",
+  "author": "gogoend <gogoend@qq.com>",
+  "homepage": "https://github.com/gogoend/anikyu/tree/main/packages/anikyu#readme",
+  "license": "MIT",
+  "main": "lib/anikyu.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gogoend/webpack-workflow-experience-base-on-anikyu.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/gogoend/webpack-workflow-experience-base-on-anikyu/issues"
+  }
+}

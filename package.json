@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "description": "Demo suite for exploring Webpack, Babel, Lerna, etc. DO NOT PUBLISH TO NPM!",
   "scripts": {
+    "dev": "lerna run dev",
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "eslint packages --ext js --fix"
   },

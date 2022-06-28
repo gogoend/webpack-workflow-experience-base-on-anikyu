@@ -5,160 +5,159 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _anikyu_class_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(103);
-/* harmony import */ var _polyfill_requestAnimationFrame_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(108);
-/* harmony import */ var _polyfill_requestAnimationFrame_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_polyfill_requestAnimationFrame_js__WEBPACK_IMPORTED_MODULE_1__);
+var Anikyu =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
 
-
-
-// 判断文件是如何引入的，如果是通过模块引入则不在全局暴露Anikyu
-// 直接在Webpack配置中改为UMD
-
-/* harmony default export */ __webpack_exports__["default"] = (_anikyu_class_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+/* WEBPACK VAR INJECTION */(function(global) {// requestAnimationFrame
+// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+// MIT license
+(function (window) {
+	var lastTime = 0;
+	var vendors = ['ms', 'moz', 'webkit', 'o'];
+	for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+		window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+		window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+	}
+	if (!window.requestAnimationFrame) window.requestAnimationFrame = function (callback) {
+		var currTime = new Date().getTime();
+		var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+		var id = window.setTimeout(function () {
+			callback(currTime + timeToCall);
+		}, timeToCall);
+		lastTime = currTime + timeToCall;
+		return id;
+	};
+	if (!window.cancelAnimationFrame) window.cancelAnimationFrame = function (id) {
+		clearTimeout(id);
+	};
+}(typeof window === 'undefined' ? global : window));
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1)))
 
 /***/ }),
+/* 1 */
+/***/ (function(module, exports) {
 
-/***/ 103:
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(104);
-/* harmony import */ var _event_doer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(105);
-/* harmony import */ var _executor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(106);
 
-
-
-
-function mixEaseFn (obj){
-	for(let key in obj){
-		_executor_js__WEBPACK_IMPORTED_MODULE_2__["ease"][key] = obj[key];
-	}
-}
-
-class Anikyu extends _event_doer_js__WEBPACK_IMPORTED_MODULE_1__["default"] {
-
-	constructor (el, queue, config) {
-		super();
-		this.el = el;
-		this.queue = queue;
-
-		let defaultConfig = {
-			duration: 2000,
-			easeType: 'quadraticInOut',
-			manualNext: false
-		};
-		this.config = Object.assign(JSON.parse(JSON.stringify(defaultConfig)), config);
-
-		this.i = 0;
-
-		this.status = {
-			paused: false
-		};
-
-		if (!this.queue[0]) {
-			return;
-		}
-		if (!this.config.manualNext) {
-			_executor_js__WEBPACK_IMPORTED_MODULE_2__["default"].call(this);
-		}
-
-		// this.executor = this.executor.bind(this);
-
-		this.reqAniHandler = null;
-
-	}
-
-	// 动画流程控制
-	// 暂停、继续、重播当前
-	pause () {
-		let { status } = this;
-
-		if (status.paused) return;
-
-		let pausedTime = Object(_util_js__WEBPACK_IMPORTED_MODULE_0__["now"])();
-		status.passedTime = pausedTime - status.startTime;
-		status.paused = true;
-	}
-	resume () {
-		let { status } = this;
-
-		if (!status.paused) return;
-
-		let startTime = Object(_util_js__WEBPACK_IMPORTED_MODULE_0__["now"])();
-		status.startTime = startTime - status.passedTime;
-		status.paused = false;
-	}
-
-	replay () {
-		let { status, queue, i, resume } = this;
-
-		if (!queue[i]) return;
-		if (status.paused) (resume.bind(this))();
-
-		_executor_js__WEBPACK_IMPORTED_MODULE_2__["default"].call(this, i);
-	}
-
-	// 跳转到、上一个、下一个
-	jump (index, finishCallFlag) {
-		let { status, queue, resume } = this;
-
-		if (!queue[index]) return;
-		if (status.paused) (resume.bind(this))();
-
-		_executor_js__WEBPACK_IMPORTED_MODULE_2__["default"].call(this, finishCallFlag ? index - 2 : index - 1);
-
-	}
-	prev () {
-		let { status, queue, i, resume } = this;
-		if (!queue[i - 1]) return;
-
-		if (status.paused) (resume.bind(this))();
-
-		this.i--;
-		_executor_js__WEBPACK_IMPORTED_MODULE_2__["default"].call(this);
-	}
-	next () {
-		let { status, queue, i, resume } = this;
-		if (!queue[i + 1]) return;
-
-		if (status.paused) (resume.bind(this))();
-
-		this.i++;
-		_executor_js__WEBPACK_IMPORTED_MODULE_2__["default"].call(this);
-	}
-
-	// 废弃
-	dispose () {
-		let { queue, i, reqAniHandler, el } = this;
-
-		let currentStageIndex = i + 1;
-		cancelAnimationFrame(reqAniHandler);
-		Object(_util_js__WEBPACK_IMPORTED_MODULE_0__["trigger"])(this, 'dispose', el, {
-			stageIndex: i,
-			name: queue[currentStageIndex].name ? queue[currentStageIndex].name : ''
-		});
-	}
-}
-
-Object.assign(Anikyu, {
-	getStyle: _util_js__WEBPACK_IMPORTED_MODULE_0__["getStyle"], rand: _util_js__WEBPACK_IMPORTED_MODULE_0__["rand"], clamp: _util_js__WEBPACK_IMPORTED_MODULE_0__["clamp"], mixEaseFn
-});
-
-/* harmony default export */ __webpack_exports__["default"] = (Anikyu);
-
-/***/ }),
-
-/***/ 104:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clamp", function() { return clamp; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStyle", function() { return getStyle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trigger", function() { return trigger; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rand", function() { return rand; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "now", function() { return now; });
+// CONCATENATED MODULE: ./src/util.js
 // 用于对数值进行钳制
 function clamp (value, min, max) {
 	return Math.max(min, Math.min(max, value));
@@ -197,14 +196,7 @@ function rand (min,max){
 }
 
 
-
-/***/ }),
-
-/***/ 105:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
+// CONCATENATED MODULE: ./src/event_doer.js
 let EventDoer = function () {
 	this.listeners = {};
 };
@@ -245,166 +237,9 @@ EventDoer.prototype = Object.assign({},{
 	}
 });
 
-/* harmony default export */ __webpack_exports__["default"] = (EventDoer);
+/* harmony default export */ var event_doer = (EventDoer);
 
-
-/***/ }),
-
-/***/ 106:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ease", function() { return ease; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return executor; });
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(104);
-/* harmony import */ var _easing_funcs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(107);
-
-
-
-let ease = Object.assign(_easing_funcs_js__WEBPACK_IMPORTED_MODULE_1__["easingFuncs"])
-
-// 获得动画在当前进度时的变化增量
-function getAddedValue (from, to, percent, easeFn, step) {
-	return (to - from) * easeFn(percent, step);
-}
-
-// 动画执行器，用于在前后一对补间动画阶段之间进行补间
-function executor (index) {
-
-	if (!isNaN(parseInt(index))) {
-		this.i = index;
-	}
-
-	let { el, i, queue, next, status, config, reqAniHandler } = this;
-
-	cancelAnimationFrame(reqAniHandler);
-
-	if (!queue[i] || !queue[i + 1]) {
-		return;
-	}
-	let perviousStatus = queue[i].props,
-		finalStatus = queue[i + 1].props;
-
-	let delay = queue[i + 1].delay !== undefined ? queue[i + 1].delay : 0;
-	let currentStageIndex = this.i + 1;
-
-	// 确保每一次的初始状态都和前一对象中的属性相等
-	// 修复重播当前、跳转到、上一个、下一个函数不正常工作的问题
-	for (let key in perviousStatus) {
-		el[key] = perviousStatus[key];
-	}
-
-	let easeType = queue[i + 1].easeType ? queue[i + 1].easeType : config.easeType;
-	let duration = queue[i + 1].duration ? queue[i + 1].duration : config.duration;
-
-	let step = queue[i + 1].step ? queue[i + 1].step : undefined;
-
-	status.startTime = Object(_util_js__WEBPACK_IMPORTED_MODULE_0__["now"])() + delay;
-
-	// let totalDelta = {};
-
-	for (let key in finalStatus) {
-		if (perviousStatus[key] === undefined) {
-			// 当前一个状态不存在时首先尝试向前搜索，直到第0个
-			for (var j = i; j >= 0; j--) {
-				if (queue[j].props[key] !== undefined) {
-					perviousStatus[key] = queue[j].props[key];
-					continue;
-				}
-				// 若到第0个仍然找不到则直接访问原始对象中相关属性
-				if (j === 0 && queue[j].props[key] === undefined) {
-					if (el[key] !== undefined && !isNaN(parseFloat(el[key]))) {
-						perviousStatus[key] = parseFloat(el[key]);
-					} else {
-						// 若依然访问不到，则直接设置该值为0
-						perviousStatus[key] = 0;
-					}
-				}
-			}
-
-		}
-		// totalDelta[key] = finalStatus[key] - parseFloat(perviousStatus[key]);
-
-		// console.table ? 
-		// 	console.table({'final':finalStatus[key],'pervious':perviousStatus[key],'delta':totalDelta[key]})
-		// 	:
-		// 	console.log({'final':finalStatus[key],'pervious':perviousStatus[key],'delta':totalDelta[key]})
-		// ;
-
-	}
-
-	let loop = () => {
-
-		if (!status.paused) {
-			// let endTime = status.startTime + duration;
-			let currentTime = Object(_util_js__WEBPACK_IMPORTED_MODULE_0__["now"])();
-			let currentProgress = Object(_util_js__WEBPACK_IMPORTED_MODULE_0__["clamp"])((currentTime - status.startTime) / duration, 0, 1);
-
-			let newValue = {}, stageDelta = {}, frameDelta = {};
-			for (let key in perviousStatus) {
-
-				let perviousVal = parseFloat(perviousStatus[key]);
-				let finalVal = parseFloat(finalStatus[key]);
-
-				newValue[key] = perviousVal + getAddedValue(perviousVal, finalVal, currentProgress, ease[easeType], step); // totalDelta[key] * ease[easeType].call(this, currentProgress, step);
-
-				stageDelta[key] = (newValue[key] === undefined ? 0 : newValue[key]) - (perviousVal === undefined ? 0 : perviousVal);
-
-				frameDelta[key] = (newValue[key] === undefined ? 0 : newValue[key]) - (el[key] === undefined ? 0 : parseFloat(el[key]));
-			}
-
-			Object.assign(el, newValue);
-			Object(_util_js__WEBPACK_IMPORTED_MODULE_0__["trigger"])(this, 'animate', el, {
-				stageIndex: this.i,
-				name: queue[currentStageIndex].name ? queue[currentStageIndex].name : '',
-				progress: currentProgress,
-				// target:el,
-				value: newValue,
-				stageDelta,
-				frameDelta
-			});
-			// if (queue[i + 1].onAnimating instanceof Function) {
-			// 	queue[i + 1].onAnimating(this);
-			// }
-			if (currentProgress == 1) {
-			// clearInterval(timer)
-			// cancelAnimationFrame(this.reqAniHandler);
-			// 如何执行下一步？
-
-				setTimeout(() => {
-				// if (queue[i + 1].onFinished instanceof Function) {
-				// 	queue[i + 1].onFinished(this);
-				// }
-					for (let key in finalStatus) {
-						el[key] = finalStatus[key];
-					}
-					Object(_util_js__WEBPACK_IMPORTED_MODULE_0__["trigger"])(this, 'finish', el, {
-						stageIndex: currentStageIndex,
-						name: queue[currentStageIndex].name ? queue[currentStageIndex].name : ''
-					});
-					if (!config.manualNext) {
-						next.call(this);
-					}
-				}, delay);
-				// debugger
-				return;
-			}
-		}
-		this.reqAniHandler = requestAnimationFrame(loop);
-	};
-	setTimeout(loop, delay);
-	// loop();
-}
-
-/***/ }),
-
-/***/ 107:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "easingFuncs", function() { return easingFuncs; });
+// CONCATENATED MODULE: ./src/easing_funcs.js
 const easingFuncs = {
 	linear: function (k) {
 		return k;
@@ -561,42 +396,287 @@ const easingFuncs = {
 		return easingFuncs.bounceOut(k * 2 - 1) * 0.5 + 0.5;
 	}
 };
+// CONCATENATED MODULE: ./src/executor.js
 
-/***/ }),
 
-/***/ 108:
-/***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {// requestAnimationFrame
-// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
-// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
-// MIT license
-(function (window) {
-	var lastTime = 0;
-	var vendors = ['ms', 'moz', 'webkit', 'o'];
-	for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-		window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
-		window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+let ease = Object.assign(easingFuncs)
+
+// 获得动画在当前进度时的变化增量
+function getAddedValue (from, to, percent, easeFn, step) {
+	return (to - from) * easeFn(percent, step);
+}
+
+// 动画执行器，用于在前后一对补间动画阶段之间进行补间
+function executor (index) {
+
+	if (!isNaN(parseInt(index))) {
+		this.i = index;
 	}
-	if (!window.requestAnimationFrame) window.requestAnimationFrame = function (callback) {
-		var currTime = new Date().getTime();
-		var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-		var id = window.setTimeout(function () {
-			callback(currTime + timeToCall);
-		}, timeToCall);
-		lastTime = currTime + timeToCall;
-		return id;
+
+	let { el, i, queue, next, status, config, reqAniHandler } = this;
+
+	cancelAnimationFrame(reqAniHandler);
+
+	if (!queue[i] || !queue[i + 1]) {
+		return;
+	}
+	let perviousStatus = queue[i].props,
+		finalStatus = queue[i + 1].props;
+
+	let delay = queue[i + 1].delay !== undefined ? queue[i + 1].delay : 0;
+	let currentStageIndex = this.i + 1;
+
+	// 确保每一次的初始状态都和前一对象中的属性相等
+	// 修复重播当前、跳转到、上一个、下一个函数不正常工作的问题
+	for (let key in perviousStatus) {
+		el[key] = perviousStatus[key];
+	}
+
+	let easeType = queue[i + 1].easeType ? queue[i + 1].easeType : config.easeType;
+	let duration = queue[i + 1].duration ? queue[i + 1].duration : config.duration;
+
+	let step = queue[i + 1].step ? queue[i + 1].step : undefined;
+
+	status.startTime = now() + delay;
+
+	// let totalDelta = {};
+
+	for (let key in finalStatus) {
+		if (perviousStatus[key] === undefined) {
+			// 当前一个状态不存在时首先尝试向前搜索，直到第0个
+			for (var j = i; j >= 0; j--) {
+				if (queue[j].props[key] !== undefined) {
+					perviousStatus[key] = queue[j].props[key];
+					continue;
+				}
+				// 若到第0个仍然找不到则直接访问原始对象中相关属性
+				if (j === 0 && queue[j].props[key] === undefined) {
+					if (el[key] !== undefined && !isNaN(parseFloat(el[key]))) {
+						perviousStatus[key] = parseFloat(el[key]);
+					} else {
+						// 若依然访问不到，则直接设置该值为0
+						perviousStatus[key] = 0;
+					}
+				}
+			}
+
+		}
+		// totalDelta[key] = finalStatus[key] - parseFloat(perviousStatus[key]);
+
+		// console.table ? 
+		// 	console.table({'final':finalStatus[key],'pervious':perviousStatus[key],'delta':totalDelta[key]})
+		// 	:
+		// 	console.log({'final':finalStatus[key],'pervious':perviousStatus[key],'delta':totalDelta[key]})
+		// ;
+
+	}
+
+	let loop = () => {
+
+		if (!status.paused) {
+			// let endTime = status.startTime + duration;
+			let currentTime = now();
+			let currentProgress = clamp((currentTime - status.startTime) / duration, 0, 1);
+
+			let newValue = {}, stageDelta = {}, frameDelta = {};
+			for (let key in perviousStatus) {
+
+				let perviousVal = parseFloat(perviousStatus[key]);
+				let finalVal = parseFloat(finalStatus[key]);
+
+				newValue[key] = perviousVal + getAddedValue(perviousVal, finalVal, currentProgress, ease[easeType], step); // totalDelta[key] * ease[easeType].call(this, currentProgress, step);
+
+				stageDelta[key] = (newValue[key] === undefined ? 0 : newValue[key]) - (perviousVal === undefined ? 0 : perviousVal);
+
+				frameDelta[key] = (newValue[key] === undefined ? 0 : newValue[key]) - (el[key] === undefined ? 0 : parseFloat(el[key]));
+			}
+
+			Object.assign(el, newValue);
+			trigger(this, 'animate', el, {
+				stageIndex: this.i,
+				name: queue[currentStageIndex].name ? queue[currentStageIndex].name : '',
+				progress: currentProgress,
+				// target:el,
+				value: newValue,
+				stageDelta,
+				frameDelta
+			});
+			// if (queue[i + 1].onAnimating instanceof Function) {
+			// 	queue[i + 1].onAnimating(this);
+			// }
+			if (currentProgress == 1) {
+			// clearInterval(timer)
+			// cancelAnimationFrame(this.reqAniHandler);
+			// 如何执行下一步？
+
+				setTimeout(() => {
+				// if (queue[i + 1].onFinished instanceof Function) {
+				// 	queue[i + 1].onFinished(this);
+				// }
+					for (let key in finalStatus) {
+						el[key] = finalStatus[key];
+					}
+					trigger(this, 'finish', el, {
+						stageIndex: currentStageIndex,
+						name: queue[currentStageIndex].name ? queue[currentStageIndex].name : ''
+					});
+					if (!config.manualNext) {
+						next.call(this);
+					}
+				}, delay);
+				// debugger
+				return;
+			}
+		}
+		this.reqAniHandler = requestAnimationFrame(loop);
 	};
-	if (!window.cancelAnimationFrame) window.cancelAnimationFrame = function (id) {
-		clearTimeout(id);
-	};
-}(typeof window === 'undefined' ? global : window));
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(10)))
+	setTimeout(loop, delay);
+	// loop();
+}
+// CONCATENATED MODULE: ./src/anikyu_class.js
+
+
+
+
+function mixEaseFn (obj){
+	for(let key in obj){
+		ease[key] = obj[key];
+	}
+}
+
+class anikyu_class_Anikyu extends event_doer {
+
+	constructor (el, queue, config) {
+		super();
+		this.el = el;
+		this.queue = queue;
+
+		let defaultConfig = {
+			duration: 2000,
+			easeType: 'quadraticInOut',
+			manualNext: false
+		};
+		this.config = Object.assign(JSON.parse(JSON.stringify(defaultConfig)), config);
+
+		this.i = 0;
+
+		this.status = {
+			paused: false
+		};
+
+		if (!this.queue[0]) {
+			return;
+		}
+		if (!this.config.manualNext) {
+			executor.call(this);
+		}
+
+		// this.executor = this.executor.bind(this);
+
+		this.reqAniHandler = null;
+
+	}
+
+	// 动画流程控制
+	// 暂停、继续、重播当前
+	pause () {
+		let { status } = this;
+
+		if (status.paused) return;
+
+		let pausedTime = now();
+		status.passedTime = pausedTime - status.startTime;
+		status.paused = true;
+	}
+	resume () {
+		let { status } = this;
+
+		if (!status.paused) return;
+
+		let startTime = now();
+		status.startTime = startTime - status.passedTime;
+		status.paused = false;
+	}
+
+	replay () {
+		let { status, queue, i, resume } = this;
+
+		if (!queue[i]) return;
+		if (status.paused) (resume.bind(this))();
+
+		executor.call(this, i);
+	}
+
+	// 跳转到、上一个、下一个
+	jump (index, finishCallFlag) {
+		let { status, queue, resume } = this;
+
+		if (!queue[index]) return;
+		if (status.paused) (resume.bind(this))();
+
+		executor.call(this, finishCallFlag ? index - 2 : index - 1);
+
+	}
+	prev () {
+		let { status, queue, i, resume } = this;
+		if (!queue[i - 1]) return;
+
+		if (status.paused) (resume.bind(this))();
+
+		this.i--;
+		executor.call(this);
+	}
+	next () {
+		let { status, queue, i, resume } = this;
+		if (!queue[i + 1]) return;
+
+		if (status.paused) (resume.bind(this))();
+
+		this.i++;
+		executor.call(this);
+	}
+
+	// 废弃
+	dispose () {
+		let { queue, i, reqAniHandler, el } = this;
+
+		let currentStageIndex = i + 1;
+		cancelAnimationFrame(reqAniHandler);
+		trigger(this, 'dispose', el, {
+			stageIndex: i,
+			name: queue[currentStageIndex].name ? queue[currentStageIndex].name : ''
+		});
+	}
+}
+
+Object.assign(anikyu_class_Anikyu, {
+	getStyle: getStyle, rand: rand, clamp: clamp, mixEaseFn
+});
+
+/* harmony default export */ var anikyu_class = (anikyu_class_Anikyu);
+// EXTERNAL MODULE: ./src/polyfill/requestAnimationFrame.js
+var polyfill_requestAnimationFrame = __webpack_require__(0);
+
+// CONCATENATED MODULE: ./src/anikyu.js
+
+
+
+// 判断文件是如何引入的，如果是通过模块引入则不在全局暴露Anikyu
+// 直接在Webpack配置中改为UMD
+
+/* harmony default export */ var anikyu = __webpack_exports__["default"] = (anikyu_class);
+
+/***/ })
+/******/ ]);
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Anikyu['default']);
+
 
 /***/ }),
 
-/***/ 223:
+/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9084,11 +9164,11 @@ if (inBrowser) {
 
 /* harmony default export */ __webpack_exports__["default"] = (Vue);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(10), __webpack_require__(224).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(10), __webpack_require__(218).setImmediate))
 
 /***/ }),
 
-/***/ 224:
+/***/ 218:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -9144,7 +9224,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(225);
+__webpack_require__(219);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -9159,7 +9239,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
-/***/ 225:
+/***/ 219:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -9349,11 +9429,11 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(10), __webpack_require__(226)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(10), __webpack_require__(220)))
 
 /***/ }),
 
-/***/ 226:
+/***/ 220:
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -9544,7 +9624,7 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ 228:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

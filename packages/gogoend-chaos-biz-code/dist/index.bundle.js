@@ -171,11 +171,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(99);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _js_animation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(101);
-/* harmony import */ var _js_button_event__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(109);
+/* harmony import */ var _js_button_event__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(103);
 /* harmony import */ var _js_button_event__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_button_event__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _js_math__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(110);
-/* harmony import */ var _unidentified_file_hello_gogoend__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(220);
-/* harmony import */ var _vue_Demo_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(221);
+/* harmony import */ var _js_math__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(104);
+/* harmony import */ var _unidentified_file_hello_gogoend__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(214);
+/* harmony import */ var _vue_Demo_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(215);
 
 
 
@@ -186,10 +186,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 console.warn(_unidentified_file_hello_gogoend__WEBPACK_IMPORTED_MODULE_8__["default"]);
-Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 221)).then(function (component) {
+Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 215)).then(function (component) {
   console.log(component);
 });
-Promise.resolve(/* import() */).then(__webpack_require__.t.bind(null, 111, 7)).then(function (cloneDeep) {
+Promise.resolve(/* import() */).then(__webpack_require__.t.bind(null, 105, 7)).then(function (cloneDeep) {
   console.log(cloneDeep);
 });
 console.log(Object(_js_math__WEBPACK_IMPORTED_MODULE_7__["cube"])(1000));
@@ -204,11 +204,11 @@ new _vue_Demo_vue__WEBPACK_IMPORTED_MODULE_9__["default"]().$mount(document.crea
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var anikyu_src_anikyu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(102);
+/* harmony import */ var anikyu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(102);
 
 var el = document.querySelector('.target');
 var obj = {};
-var ani = new anikyu_src_anikyu__WEBPACK_IMPORTED_MODULE_0__["default"](obj, [{
+var ani = new anikyu__WEBPACK_IMPORTED_MODULE_0__["default"](obj, [{
   props: {
     top: 100,
     left: 100,
@@ -243,7 +243,7 @@ ani.addEventListener('finish', function (e) {
 
 /***/ }),
 
-/***/ 109:
+/***/ 103:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -257,14 +257,14 @@ button.addEventListener('click', function () {
 
 /***/ }),
 
-/***/ 110:
+/***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "square", function() { return square; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cube", function() { return cube; });
-/* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(111);
+/* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(105);
 /* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_0__);
 
 console.log(lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_0___default.a);
@@ -277,7 +277,7 @@ function cube(x) {
 
 /***/ }),
 
-/***/ 220:
+/***/ 214:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -289,14 +289,14 @@ let helloGogoend = 'hello gogoend';
 
 /***/ }),
 
-/***/ 221:
+/***/ 215:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Demo_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(222);
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_52455fc5_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Demo_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(227);
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(228);
+/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Demo_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(216);
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_52455fc5_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Demo_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(221);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(222);
 var disposed = false
 /* script */
 
@@ -331,12 +331,12 @@ if (false) {}
 
 /***/ }),
 
-/***/ 222:
+/***/ 216:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(223);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(217);
 //
 //
 //
@@ -347,22 +347,29 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (vue__WEBPACK_IMPORTED_MODULE_0__["default"].extend({
   name: 'gogoend',
-  data: function data() {
+
+  data() {
     return {
       msg: ''
     };
   },
-  mounted: function mounted() {
+
+  mounted() {
     console.log('Vue', 'RUN!!!', 'GOGOEND!!!');
     /**
      * if块最终将被我们所编写的Babel插件删除
      */
+
+    if (GOGOEND) {
+      console.log('Vue', 'STOP!!!', 'GOGOEND!!!');
+    }
   }
+
 }));
 
 /***/ }),
 
-/***/ 227:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

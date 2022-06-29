@@ -9,7 +9,8 @@ module.exports = function (api) {
 					'useBuiltIns': 'usage',
 					'corejs':3
 				}
-			]
+			],
+			'@vue/cli-plugin-babel/preset'
 		],
 		'plugins': [
 			'@babel/plugin-external-helpers',
